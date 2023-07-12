@@ -31,10 +31,10 @@ mod value;
 /// If you just want to simply deserialize a value,
 /// you can use the [`from_str`] convenience function.
 pub struct Deserializer<'de> {
-    bytes: Bytes<'de>,
-    newtype_variant: bool,
-    last_identifier: Option<&'de str>,
-    recursion_limit: Option<usize>,
+    pub bytes: Bytes<'de>,
+    pub newtype_variant: bool,
+    pub last_identifier: Option<&'de str>,
+    pub recursion_limit: Option<usize>,
 }
 
 impl<'de> Deserializer<'de> {
